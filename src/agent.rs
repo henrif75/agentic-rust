@@ -16,11 +16,8 @@ use std::sync::Arc;
 #[async_trait]
 pub trait LlmAdapter: Send + Sync {
     /// Executes a simple text completion with a system prompt and user input.
-    async fn prompt(
-        &self,
-        system_prompt: &str,
-        user_prompt: &str,
-    ) -> Result<String, anyhow::Error>;
+    async fn prompt(&self, system_prompt: &str, user_prompt: &str)
+    -> Result<String, anyhow::Error>;
 
     /// Executes a text completion with access to the Mock Search tool.
     async fn prompt_with_search(
@@ -217,10 +214,7 @@ impl LlmAdapter for MockAdapter {
 
 /// Factory function to build an `LlmAdapter` depending on the provider name
 /// and model configurations. It verifies environmental keys before construction.
-pub fn build_adapter(
-    provider: &str,
-    model: &str,
-) -> Result<Arc<dyn LlmAdapter>, anyhow::Error> {
+pub fn build_adapter(provider: &str, model: &str) -> Result<Arc<dyn LlmAdapter>, anyhow::Error> {
     match provider.to_lowercase().as_str() {
         "gemini" => {
             if env::var("GEMINI_API_KEY").is_err() {
