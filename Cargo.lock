@@ -398,6 +398,7 @@ dependencies = [
  "futures",
  "rig-core",
  "serde",
+ "serde_json",
  "tempfile",
  "tokio",
  "toml",
