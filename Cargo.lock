@@ -3,6 +3,25 @@
 version = 4
 
 [[package]]
+name = "agentic-rust"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "clap",
+ "colored",
+ "dialoguer",
+ "dotenvy",
+ "futures",
+ "rig-core",
+ "serde",
+ "serde_json",
+ "tempfile",
+ "tokio",
+ "toml",
+]
+
+[[package]]
 name = "anstream"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -384,25 +403,6 @@ name = "dyn-clone"
 version = "1.0.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d0881ea181b1df73ff77ffaaf9c7544ecc11e82fba9b5f27b262a3c73a332555"
-
-[[package]]
-name = "elegant-pythagoras"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "async-trait",
- "clap",
- "colored",
- "dialoguer",
- "dotenvy",
- "futures",
- "rig-core",
- "serde",
- "serde_json",
- "tempfile",
- "tokio",
- "toml",
-]
 
 [[package]]
 name = "encode_unicode"

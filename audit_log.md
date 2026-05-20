@@ -14,4 +14,4 @@ This file tracks all design decisions, git actions, and execution commands run d
 | 2026-05-20T22:23:50Z | Create generic LlmAdapter trait and implementations | `feat/agent-adapter` | Create src/agent.rs abstracting Gemini, OpenAI, Anthropic, and Ollama clients using CompletionClient and ProviderClient traits. Include a MockAdapter for unit and integration testing. |
 | 2026-05-20T22:26:00Z | Refactor into binary + library and implement orchestrator | `feat/main-orchestrator` | Move core modules to src/lib.rs, implement concurrent orchestrator `run_research_pipeline` using tokio tasks. Update src/main.rs as a clean entry point. |
 | 2026-05-20T22:27:10Z | Implement full integration test suite | `feat/main-orchestrator` | Create tests/integration_tests.rs covering all three required user scenarios. |
-| 2026-05-20T22:41:30Z | Publish open source project on GitHub | `main` | Create public repository `henrif75/elegant-pythagoras` using GitHub CLI and push all commits. |
+| 2026-05-20T22:41:30Z | Publish open source project on GitHub | `main` | Create public repository `henrif75/agentic-rust` using GitHub CLI and push all commits. |

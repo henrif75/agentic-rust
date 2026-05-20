@@ -53,8 +53,8 @@ cargo --version
 ### Installation
 Clone the repository and build:
 ```bash
-git clone https://github.com/your-username/elegant-pythagoras.git
-cd elegant-pythagoras
+git clone https://github.com/your-username/agentic-rust.git
+cd agentic-rust
 cargo build --release
 ```
 

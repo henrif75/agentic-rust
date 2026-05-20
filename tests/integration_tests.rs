@@ -3,7 +3,7 @@
 //! Tests the pipeline orchestrator and tool logic under various scenarios
 //! using a mock adapter to ensure deterministic behavior without live network calls.
 
-use elegant_pythagoras::{
+use agentic_rust::{
     agent::{MockAdapter, build_adapter},
     config::{AppConfig, Cli, resolve_inputs},
     run_research_pipeline,
@@ -13,14 +13,14 @@ use std::sync::Arc;
 
 /// Helper function to create a test configuration with mock prompts.
 fn get_test_config() -> AppConfig {
-    let models_struct = elegant_pythagoras::config::ModelsConfig {
+    let models_struct = agentic_rust::config::ModelsConfig {
         gemini: "gemini-1.5-flash".to_string(),
         openai: "gpt-4o-mini".to_string(),
         anthropic: "claude-3-5-sonnet".to_string(),
         ollama: "llama3".to_string(),
     };
 
-    let prompts = elegant_pythagoras::config::PromptsConfig {
+    let prompts = agentic_rust::config::PromptsConfig {
         router_prompt: "router system prompt".to_string(),
         research_prompt: "research system prompt".to_string(),
         synthesizer_prompt: "synthesizer system prompt".to_string(),

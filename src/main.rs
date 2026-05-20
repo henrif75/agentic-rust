@@ -1,12 +1,12 @@
 //! Command line application entry point for the Multi-Agent Research Assistant.
 
-use clap::Parser;
-use colored::*;
-use elegant_pythagoras::{
+use agentic_rust::{
     agent::build_adapter,
     config::{Cli, load_config, resolve_inputs},
     run_research_pipeline,
 };
+use clap::Parser;
+use colored::*;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -25,7 +25,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                 )
                 .yellow()
             );
-            elegant_pythagoras::config::AppConfig::default()
+            agentic_rust::config::AppConfig::default()
         }
     };
 

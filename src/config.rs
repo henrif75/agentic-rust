@@ -67,7 +67,7 @@ pub struct AppConfig {
 
 /// Command line interface parser powered by `clap`.
 #[derive(Parser, Debug)]
-#[command(name = "elegant-pythagoras")]
+#[command(name = "agentic-rust")]
 #[command(author = "Antigravity Authors")]
 #[command(version = "1.0.0")]
 #[command(about = "Concurrent Multi-Agent Research Assistant using Rig & Tokio", long_about = None)]
